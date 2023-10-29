@@ -4,7 +4,7 @@
 <nav class="py-4">
     <ul class="flex items-center space-x-2 text-sm text-gray-600">
         <li>
-            <a href="/" class="hover:text-gray-800">Accueil</a>
+            <a href="/" class="hover:text-gray-700">Accueil</a>
         </li>
         <li>
             <span class="mx-2">/</span>

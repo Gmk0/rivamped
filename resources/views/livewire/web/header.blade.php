@@ -129,7 +129,7 @@
 
 
     <div class="flex bg-white border-b header-wrap animated">
-        <div class="w-full px-6 ">
+        <div class="w-full px-4 lg:px-6">
             <div class="grid items-center justify-between w-full grid-cols-12 mx-auto">
                 <!--Desktop Logo-->
                 <div class="hidden col-span-2 px-6 logo lg:block">
@@ -153,7 +153,7 @@
                             <li class="font-medium ">
                                 <a href="{{route('home')}}" >Accueill</a>
                             </li>
-                            <li class="lvl1 parent megamenu"><a href="{{route('actualite')}}" wire:navigate>Actualites <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent megamenu"><a href="{{route('Realisations')}}" wire:navigate>Realisations <i class="anm anm-angle-down-l"></i></a>
 
                             </li>
                             <li class="lvl1 parent megamenu"><a href="{{route('about')}}" wire:navigate>A propos <i class="anm anm-angle-down-l"></i></a>
@@ -171,7 +171,7 @@
 
                                 </ul>
                             </li>
-                            <li class="lvl1 parent dropdown"><a href="#">Blog <i class="anm anm-angle-down-l"></i></a>
+                            <li class="lvl1 parent dropdown"><a href="{{route('blog')}}" wire:navigate>Blog <i class="anm anm-angle-down-l"></i></a>
 
                             </li>
 
@@ -189,11 +189,11 @@
                     </div>
                 </div>
                 <!--Mobile Logo-->
-                <div class="col-span-4 lg:items-end lg:col-span-2 md:col-span-3">
+               <div class="col-span-4 lg:items-end lg:col-span-2 md:col-span-3">
                     <div class="site-cart">
-                        <a href="" class="px-4 py-2.5 no-underline text-white  text-base border-2 hover:bg-yellow-400 hover:text-white border-yellow-300 bg-yellow-300  rounded-md">
-                           <b>Faites un Don</b>
-                     </a>
+                        <a href="{{route('don')}}" class="btn-donate">
+                            Faites un Don
+                        </a>
 
                     </div>
 

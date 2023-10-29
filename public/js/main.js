@@ -1,60 +1,32 @@
-/*********************************************************************************
 
-    Template Name: Belle - Multipurpose eCommerce Bootstrap4 HTML Template
-    Description: A perfect template to build beautiful and unique Glasses websites. It comes with nice and clean design.
-    Version: 1.0
-
-**********************************************************************************/
-
-/*************************************************
-  1. Preloader Loading
-  2. Promotional Bar Header
-  3. Currency Show/Hide dropdown
-  4. Language Show/Hide dropdown
-  5. Top Links Show/Hide dropdown
-  6. Minicart Dropdown
-  7. Sticky Header
-  8. Search Trigger
-  9. Mobile Menu
-  10 Slick Slider
-     10.1 Homepage Slideshow
-     10.2 Product Slider Slick
-     10.3 Product Slider Slick Style2
-     10.4 Product Slider Slick Style3
-     10.5 Product Slider Slick Fullwidth
-     10.6 Product Slider Slick Product Page
-     10.7 Collection Slider Slick
-     10.8 Collection Slider Slick 4 items
-     10.9 Logo Slider Slick
-     10.10 Testimonial Slider Slick
-  11. Tabs With Accordian Responsive
-  12. Sidebar Categories Level links
-  13. Price Range Slider
-  14. Color Swacthes
-  15. Footer links for mobiles
-  16. Site Animation
-  17. SHOW HIDE PRODUCT TAG
-  18. SHOW HIDE PRODUCT Filters
-  19. Timer Count Down
-  20. Scroll Top
-  21. Height Product Grid Image
-  22. Product details slider 2
-  23. Product details slider 1
-  24. Product Zoom
-  25. Product Page Popup
-  26. Quantity Plus Minus
-  27. Visitor Fake Message
-  28. Product Tabs
-  29. Promotion / Notification Cookie Bar
-  30. Image to background js
-  31. COLOR SWATCH ON COLLECTION PAGE
-  32. Related Product Slider
-  33. Infinite Scroll js
-*************************************************/
 
 (function ($) {
     // Start of use strict
     'use strict';
+
+
+
+    $('#customers-testimonials').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 15,
+        autoplay: true,
+        dots: true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1170: {
+                items: 3
+            }
+        }
+    });
 
     /*-----------------------------------------
       1. Preloader Loading -----------------------

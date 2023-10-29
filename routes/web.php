@@ -20,18 +20,25 @@ Route::get('/', \App\Livewire\Web\Home::class)->name('home');
 Route::view('/test', 'test')->name('test');
 
 
-Route::get('/actualite', \App\Livewire\Web\News::class)->name('actualite');
+Route::get('/Realisations', \App\Livewire\Web\News::class)->name('Realisations');
 
+
+Route::get('/blog/{slug}', \App\Livewire\Blog\OneView::class)->name('blog.view');
 Route::get('/blog', \App\Livewire\Web\Blog::class)->name('blog');
-
-Route::get('/faites-un-don', \App\Livewire\Web\Don::class)->name('don');
 
 Route::get('/vos-avis', \App\Livewire\Web\FeedBack::class)->name('feedback');
 
 Route::get('/contact', \App\Livewire\Web\Contact::class)->name('contact');
 Route::get('/apropos-de-nous', \App\Livewire\Web\About::class)->name('about');
-Route::get('/foirs-aux-questions', \App\Livewire\Web\About::class)->name('faq');
+Route::get('/foirs-aux-questions', \App\Livewire\Web\Faq::class)->name('faq');
+Route::get('/axe-accompagnement/{axe?}', \App\Livewire\Web\AxeView::class)->name('axe');
 
+Route::get('/faites-un-don', \App\Livewire\Web\DonView::class)->name('don');
+Route::get('/join-us/benevole', \App\Livewire\Web\BenevoleView::class)->name('benevole');
+
+Route::get('/join-us/partenarait', \App\Livewire\Web\PartenaireView::class)->name('partenarait');
+
+Route::get('/histoires/{story?}', \App\Livewire\Web\Story::class)->name('story');
 
 
 Route::middleware([

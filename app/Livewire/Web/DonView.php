@@ -8,10 +8,11 @@ use Livewire\Attributes\Layout;
 
 
 #[Layout('layouts.web-layout')]
-class Don extends Component
+
+class DonView extends Component
 {
     public function render()
     {
-        return view('livewire.web.don');
+        return view('livewire.web.don-view');
     }
 }
