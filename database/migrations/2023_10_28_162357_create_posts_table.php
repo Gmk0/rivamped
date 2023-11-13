@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->json('tags')->nullable();
-
             $table->text('content');
             $table->text('description')->nullable();
             $table->foreignId('category_id')->nullable();

@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Axe extends Model
 {
     use HasFactory;
-    protected  $fillable = ['title', 'images', 'description', 'slug', 'content', 'like', 'is_publish'];
+    protected  $fillable = ['title', 'image', 'description', 'slug', 'content', 'like', 'is_publish'];
 
 }

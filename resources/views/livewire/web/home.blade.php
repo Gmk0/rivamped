@@ -28,7 +28,7 @@
     <section class="min-h-screen bg-white">
         <div class="max-w-6xl py-8 mx-auto">
             <div data-aos="flip-down" class="max-w-screen-md mx-auto text-center">
-                <h1 class="mb-4 text-3xl font-bold">Qui Sommes<span class="text-yellow-500"> nous?</span></h1>
+                <h1 class="mb-4 text-3xl font-bold text-yellow-500">Qui Sommes nous? </h1>
                 <p class="text-gray-500"></p>
             </div>
 
@@ -61,18 +61,18 @@
 
                     </div>
 
-                   <div class="flex flex-row gap-4 pt-6">
-                        <div class="w-1/2 mr-2">
+                   <div class="flex flex-col gap-4 pt-6">
+                        <div class="block">
                             <i class="bx bx-receipt"></i>
                             <h4 class="mb-4 text-lg text-gray-600">Humanisez nos prisons</h4>
-                            <p class="text-base font-medium text-justify">Bien que detenus en prison, nos citoyens ont aussi droits à la vie
+                            <p class="text-base text-justify">Bien que detenus en prison, nos citoyens ont aussi droits à la vie
                                 à des bonnes conditions
                                 hygieniques, alimentaires et meme medicales.</p>
                         </div>
-                        <div class="w-1/2 ">
+                        <div class="block ">
                             <i class="text-justify bx bx-cube-alt"></i>
                             <h4 class="mb-4 text-lg text-gray-600">Les écouter</h4>
-                            <p class="text-base font-medium">Pretons oreilles à ce qu'ils disent, leurs peines et difficultés.</p>
+                            <p class="text-base ">Pretons oreilles à ce qu'ils disent, leurs peines et difficultés.</p>
                         </div>
                     </div>
 
@@ -91,8 +91,8 @@
 
         <div class="max-w-6xl pt-8 mx-auto">
             <div data-aos="flip-down" class="max-w-screen-md mx-auto text-center">
-                <h1 class="mb-4 text-3xl font-bold">Axes<span class="text-yellow-500"> D'Accompagnement</span></h1>
-                <p class="text-gray-500">Nous accompagnons les prisonniers dans l'apprentissage des métiers variés, selon le
+                <h1 class="mb-4 text-3xl font-bold text-yellow-500">Axes  D'Accompagnement </h1>
+                <p class="text-base text-gray-500">Nous accompagnons les prisonniers dans l'apprentissage des métiers variés, selon le
                 niveau d'adaptation
                 de chacun, ou soit sur demande expressive de la personne.</p>
             </div>
@@ -107,7 +107,7 @@
                         class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                         <div class="relative p-8 py-12 space-y-8">
                             <div class="flex items-center justify-center">
-                                <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png" class="items-center w-12" width="512" height="512"
+                                <img src="{{Storage::disk('local')->url('public/'.$axe->image) }}" class="items-center w-12" width="512" height="512"
                                     alt="burger illustration" />
 
                             </div>
@@ -149,8 +149,8 @@
 
         <div class="max-w-6xl pt-8 mx-auto">
             <div data-aos="flip-down" class="max-w-screen-md mx-auto text-center">
-                <h1 class="mb-4 text-3xl font-bold">Galerie de <span class="text-yellow-500"> réussites</span></h1>
-                <p class="text-gray-500">Nos histoires de réussite.</p>
+                <h1 class="mb-4 text-3xl font-bold text-yellow-500">Galerie de  réussites</h1>
+                <p class="text-base text-gray-500">Nos histoires de réussite.</p>
             </div>
 
             <div class="px-6 py-16 lg:px-0">
@@ -234,7 +234,7 @@
         <div class="max-w-6xl pt-8 mx-auto">
 
             <div data-aos="flip-down" class="max-w-screen-md mx-auto text-center">
-                <h1 class="mb-4 text-3xl font-bold">Comment nous <span class="text-yellow-500"> soutenir</span></h1>
+                <h1 class="mb-4 text-3xl font-bold text-yellow-500">Comment nous soutenir</h1>
                 <p class="px-6 text-gray-500">Soutenez notre cause et faites une différence dans la vie de ceux qui
                 cherchent à se réintégrer dans la société..</p>
             </div>
@@ -325,7 +325,7 @@
         <div class="px-4 py-8 mx-auto max-w-7xl">
 
             <div data-aos="flip-down" class="max-w-screen-md mx-auto text-center">
-                <h1 class="mb-4 text-3xl font-bold">Nos <span class="text-yellow-500"> Témoignages</span></h1>
+                <h1 class="mb-4 text-3xl font-bold text-yellow-500">Nos  Témoignages</h1>
                 <p class="px-4 text-gray-500">Chez Revempaded, nous nous engageons à soutenir les détenus et
                 ex-détenus dans leur processus de réintégration dans la société</p>
             </div>
@@ -362,14 +362,14 @@
                 <div class="w-full px-4 lg:w-8/12">
 
                     <div x-init="$nextTick(() => $el._x_swiper = new Swiper($el, { slidesPerView: '4', autoplay: true, breakpoints: { 0: { slidesPerView: 1 }, 520: { slidesPerView:  1}, 950: { slidesPerView: 1 }, 1100: { slidesPerView: 1 } }, spaceBetween: 15, navigation: { nextEl: '.next-btn', prevEl: '.prev-btn' } }))"
-                        class="max-w-xl p-4 border border-blue-500 rounded-lg swiper">
+                        class="max-w-xl p-4 bg-yellow-500 border border-blue-500 rounded-lg swiper">
                         <div class="flex justify-between mb-2">
                             <div>
 
                             </div>
                             <div class="flex gap-4">
                                 <button
-                                    class="p-3 transition border rounded-full prev-btn border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white">
+                                    class="p-3 text-gray-200 transition border border-gray-200 rounded-full prev-btn hover:bg-blue-600 hover:text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                         stroke="currentColor" class="w-5 h-5 rtl:rotate-180">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -377,7 +377,7 @@
                                 </button>
 
                                 <button
-                                    class="p-3 transition border rounded-full next-btn border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white">
+                                    class="p-3 text-gray-200 transition border border-gray-200 rounded-full next-btn hover:bg-blue-600 hover:text-white">
                                     <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
@@ -434,7 +434,7 @@
         <div class="max-w-6xl py-8 mx-auto">
 
             <div data-aos="flip-down" class="max-w-screen-md mx-auto text-center">
-                <h1 class="mb-4 text-3xl font-bold">Nous <span class="text-yellow-500"> Contacter</span></h1>
+                <h1 class="mb-4 text-3xl font-bold text-yellow-500">Nous <span class="text-yellow-500"> Contacter</span></h1>
                 <p class="px-4 text-gray-500">Avez-vous des questions ou souhaitez-vous en savoir plus sur notre
                     organisation? N'hésitez pas à nous contacter</p>
             </div>
@@ -446,7 +446,7 @@
 
                         <div class="mb-8 flex w-full max-w-[370px]">
                             <div
-                                class="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
+                                class="border-amber-500 border mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
                                 <svg width="24" height="24" viewBox="0 0 24 24" class="fill-current">
                                     <path
                                         d="M21.8182 24H16.5584C15.3896 24 14.4156 23.0256 14.4156 21.8563V17.5688C14.4156 17.1401 14.0649 16.7893 13.6364 16.7893H10.4026C9.97403 16.7893 9.62338 17.1401 9.62338 17.5688V21.8173C9.62338 22.9866 8.64935 23.961 7.48052 23.961H2.14286C0.974026 23.961 0 22.9866 0 21.8173V8.21437C0 7.62972 0.311688 7.08404 0.818182 6.77223L11.1039 0.263094C11.6494 -0.0876979 12.3896 -0.0876979 12.9351 0.263094L23.2208 6.77223C23.7273 7.08404 24 7.62972 24 8.21437V21.7783C24 23.0256 23.026 24 21.8182 24ZM10.3636 15.4251H13.5974C14.7662 15.4251 15.7403 16.3995 15.7403 17.5688V21.8173C15.7403 22.246 16.0909 22.5968 16.5195 22.5968H21.8182C22.2468 22.5968 22.5974 22.246 22.5974 21.8173V8.25335C22.5974 8.13642 22.5195 8.01949 22.4416 7.94153L12.1948 1.4324C12.0779 1.35445 11.9221 1.35445 11.8442 1.4324L1.55844 7.94153C1.44156 8.01949 1.4026 8.13642 1.4026 8.25335V21.8563C1.4026 22.285 1.75325 22.6358 2.18182 22.6358H7.48052C7.90909 22.6358 8.25974 22.285 8.25974 21.8563V17.5688C8.22078 16.3995 9.19481 15.4251 10.3636 15.4251Z" />
@@ -461,7 +461,7 @@
                         </div>
                         <div class="mb-8 flex w-full max-w-[370px]">
                             <div
-                                class="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
+                                class="border-amber-500 border mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
                                 <svg width="24" height="26" viewBox="0 0 24 26" class="fill-current">
                                     <path
                                         d="M22.6149 15.1386C22.5307 14.1704 21.7308 13.4968 20.7626 13.4968H2.82869C1.86042 13.4968 1.10265 14.2125 0.97636 15.1386L0.092295 23.9793C0.0501967 24.4845 0.21859 25.0317 0.555377 25.4106C0.892163 25.7895 1.39734 26 1.94462 26H21.6887C22.1939 26 22.6991 25.7895 23.078 25.4106C23.4148 25.0317 23.5832 24.5266 23.5411 23.9793L22.6149 15.1386ZM21.9413 24.4424C21.8992 24.4845 21.815 24.5687 21.6466 24.5687H1.94462C1.81833 24.5687 1.69203 24.4845 1.64993 24.4424C1.60783 24.4003 1.52364 24.3161 1.56574 24.1477L2.4498 15.2649C2.4498 15.0544 2.61819 14.9281 2.82869 14.9281H20.8047C21.0152 14.9281 21.1415 15.0544 21.1835 15.2649L22.0676 24.1477C22.0255 24.274 21.9834 24.4003 21.9413 24.4424Z" />
@@ -478,7 +478,7 @@
                         </div>
                         <div class="mb-8 flex w-full max-w-[370px]">
                             <div
-                                class="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
+                                class="mr-6  border-amber-500 border flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]">
                                 <svg width="28" height="19" viewBox="0 0 28 19" class="fill-current">
                                     <path
                                         d="M25.3636 0H2.63636C1.18182 0 0 1.16785 0 2.6052V16.3948C0 17.8322 1.18182 19 2.63636 19H25.3636C26.8182 19 28 17.8322 28 16.3948V2.6052C28 1.16785 26.8182 0 25.3636 0ZM25.3636 1.5721C25.5909 1.5721 25.7727 1.61702 25.9545 1.75177L14.6364 8.53428C14.2273 8.75886 13.7727 8.75886 13.3636 8.53428L2.04545 1.75177C2.22727 1.66194 2.40909 1.5721 2.63636 1.5721H25.3636ZM25.3636 17.383H2.63636C2.09091 17.383 1.59091 16.9338 1.59091 16.3499V3.32388L12.5 9.8818C12.9545 10.1513 13.4545 10.2861 13.9545 10.2861C14.4545 10.2861 14.9545 10.1513 15.4091 9.8818L26.3182 3.32388V16.3499C26.4091 16.9338 25.9091 17.383 25.3636 17.383Z" />
@@ -512,8 +512,8 @@
                             </div>
                             <div>
                                 <button type="submit"
-                                    class="w-full p-3 text-white bg-blue-600 border border-blue-600 rounded hover:bg-opacity-90">
-                                    Send Message
+                                    class="w-full p-3 text-white bg-yellow-500 border border-yellow-500 rounded hover:bg-opacity-90">
+                                    Envoyer un Message
                                 </button>
                             </div>
                         </form>
@@ -765,9 +765,9 @@
     <section class="bg-white border-b border-gray-500 dark:bg-gray-900">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
             <div class="max-w-screen-md mx-auto sm:text-center">
-                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+                <h2 class="mb-4 text-xl font-extrabold tracking-tight text-gray-900 dark:text-white">
                     Inscrivez-vous à notre bulletin d'information</h2>
-                <p class="max-w-2xl mx-auto mb-8 text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
+                <p class="max-w-2xl mx-auto mb-8 text-gray-500 md:mb-12 dark:text-gray-400">
                     Restez informé(e) de l'avancée de notre feuille de route, des annonces et des remises exclusives.
                     N'hésitez pas à
                     vous inscrire avec votre adresse e-mail.</p>

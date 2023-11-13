@@ -32,7 +32,9 @@ class AxeResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('images'),
+                Forms\Components\FileUpload::make('image')
+                ->preserveFilenames()
+                ->directory('axes'),
                 Forms\Components\Toggle::make('is_publish')
                     ->required(),
             ]);

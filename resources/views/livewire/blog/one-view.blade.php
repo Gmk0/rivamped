@@ -338,9 +338,9 @@
 <section class="bg-white dark:bg-gray-900">
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
         <div class="max-w-screen-md mx-auto sm:text-center">
-            <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+            <h2 class="mb-4 text-xl font-extrabold tracking-tight text-gray-900 dark:text-white">
                 Inscrivez-vous à notre bulletin d'information</h2>
-            <p class="max-w-2xl mx-auto mb-8 text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
+            <p class="max-w-2xl mx-auto mb-8 text-gray-500 md:mb-12 dark:text-gray-400">
                 Restez informé(e) de l'avancée de notre feuille de route, des annonces et des remises exclusives.
                 N'hésitez pas à
                 vous inscrire avec votre adresse e-mail.</p>

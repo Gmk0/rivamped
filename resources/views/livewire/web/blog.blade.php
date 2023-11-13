@@ -28,8 +28,7 @@
             <div class="max-w-screen-xl px-2 py-8 mx-auto lg:py-16 lg:px-2">
                 <div class="max-w-screen-sm mx-auto mb-8 text-center lg:mb-16">
 
-                    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">We use an agile approach to test
-                        assumptions and connect with the needs of your audience early and often.</p>
+
                 </div>
 
                 <div class="flex flex-row w-full">
