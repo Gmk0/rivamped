@@ -35,7 +35,7 @@
            <div class="flex items-center justify-end w-full h-auto pt-2 lg:pt-0 lg:h-10">
                 <div class="flex text-[14px] gap-2  lg:gap-4 lg:justify-between">
 
-                    <div x-data="{ open: false }" @click.away="open = false">
+                    <div x-data="{ open: false }" class="hidden" @click.away="open = false">
                         <button @click="open = !open" class="flex gap-1 focus:outline-none">
                             <span>
                                 <svg class="w-5 h-5 mr-2 rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@
 
 
     <div class="flex bg-white border-b header-wrap animated">
-        <div class="w-full px-4 lg:px-6">
+        <div class="w-full px-2 lg:px-6">
             <div class="grid items-center justify-between w-full grid-cols-12 mx-auto">
                 <!--Desktop Logo-->
                 <div class="hidden col-span-2 px-6 logo lg:block">
@@ -180,7 +180,7 @@
                     <!--End Desktop Menu-->
                 </div>
                 <!--Mobile Logo-->
-                <div class="block col-span-4 mx-auto lg:col-span-2 lg:hidden mobile-logo">
+                <div class="block col-span-4  lg:col-span-2 lg:hidden mobile-logo">
                     <div class="logo w-18">
                         <a href="{{url('/')}}">
                             <img src="/img/logo.jpg" class="w-12" alt="Revempade"
@@ -191,7 +191,7 @@
                 <!--Mobile Logo-->
                <div class="col-span-4 lg:items-end lg:col-span-2 md:col-span-3">
                     <div class="site-cart">
-                        <a href="{{route('don')}}" class="btn-donate2">
+                        <a href="{{route('don')}}" wire:navigate class="btn-donate2">
                             Faites un Don
                         </a>
 
@@ -206,7 +206,7 @@
         <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
         <ul id="MobileNav" class="mobile-nav">
             <li class="flex lvl1 parent">
-                <a class="flex gap-2" href="{{route('home')}}">
+                <a class="flex gap-2" href="{{route('home')}}" wire:navigate>
 
 
                 <span class="flex gap-4">
@@ -222,7 +222,7 @@
                 </a>
 
             </li>
-            <li class="lvl1 parent megamenu"><a href=""{{route('Realisations')}}>
+            <li class="lvl1 parent megamenu"><a href="{{route('Realisations')}}" wire:navigate>
                <span class="flex gap-4">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                         class="w-5 h-5">
@@ -235,7 +235,7 @@
             </a>
 
             </li>
-            <li class="lvl1 parent"><a href="product-layout-1.html">
+            <li class="lvl1 parent"><a href="{{route('contact')}}" wire:navigate>
 
                <span class="flex gap-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -248,7 +248,7 @@
         </a>
 
             </li>
-            <li class="lvl1 parent"><a href="about-us.html">
+            <li class="lvl1 parent"><a href="{{route('blog')}}" wire:navigate>
 
                     <span class="flex gap-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"

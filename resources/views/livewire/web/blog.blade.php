@@ -8,7 +8,7 @@
 
         </div>
 
-        <div class="absolute inset-0 flex items-center justify-start px-4">
+        <div class="absolute inset-0 lg:flex items-center hidden justify-start px-4">
          <x-bread-cumb :lien1="'Blog'" />
 
         </div>

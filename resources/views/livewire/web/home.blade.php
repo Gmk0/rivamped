@@ -7,7 +7,7 @@
     <section class="py-8">
         <div class="flex flex-col h-full lg:flex-row">
             <div class="flex flex-col items-center justify-center w-full px-6 lg:w-1/2 ">
-                <h2 class="mb-4 text-5xl font-bold text-center">Faites une différence avec votre don !</h2>
+                <h2 class="mb-4 text-2xl lg:text-4xl font-bold text-center">Faites une différence avec votre don !</h2>
                 <p class="mb-6 text-lg text-center">Votre générosité soutient notre mission en faveur de la réhabilitation et de
                     la réinsertion sociale des détenus.</p>
                 <a href="{{route('don')}}" class="btn-donate">Faire un don</a>
@@ -492,7 +492,7 @@
                     </div>
                 </div>
                 <div data-aos="fade-left" class="w-full px-4 lg:w-7/12 xl:w-6/12">
-                    <div class="relative py-8 bg-white rounded-lg shadow-lg sm:p-12">
+                    <div class="relative p-8 bg-white rounded-lg shadow-lg   lg:p-12">
                         <form>
                             <div class="mb-6">
                                 <input type="text" placeholder="Votre Nom"

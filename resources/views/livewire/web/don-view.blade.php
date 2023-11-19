@@ -1,15 +1,15 @@
 <div>
     <div class="relative w-full h-auto border-b border-gray-300">
         <div class="py-8 text-center text-white bg-gradient-to-r from-blue-500 to-blue-700">
-            <h2 class="mb-4 text-3xl font-extrabold tracking-tight lg:text-4xl">
+            <h2 class="mb-4 text-2xl font-extrabold tracking-tight lg:text-4xl">
                 SOUTENEZ NOTRE CAUSE PAR VOTRE DON</h2>
-            <p class="max-w-md mx-auto mb-6 text-lg">Votre don aidera à fournir des repas, à offrir un abri et à
+            <p class="max-w-md mx-auto text-gray-800 mb-6 text-lg">Votre don aidera à fournir des repas, à offrir un abri et à
                 soutenir
                 l'éducation des personnes dans le besoin. Chaque euro compte pour changer des vies.</p>
 
         </div>
 
-        <div class="py-8 text-center">
+        <div class="py-8 px-4 text-center">
             <h3 class="mb-4 text-xl font-semibold">Choisissez un mode de paiement pour soutenir notre cause</h3>
             <form class="max-w-md mx-auto">
                 <input type="text" placeholder="Nom"

@@ -10,7 +10,7 @@
 
         </div>
 
-        <div class="absolute inset-0 flex items-center justify-start px-4">
+        <div class="absolute hidden inset-0 lg:flex items-center justify-start px-4">
             <x-bread-cumb :lien1="'Realisations'" />
 
         </div>
@@ -76,7 +76,7 @@
 
 
                                 <h5 class="text-xl font-semibold text-yellow-300 truncate">
-                                    <a href="https://actiondamienrdcongo.org/news/9" class="text-danger">
+                                    <a href="#" class="text-danger">
                                         VISITE DE MR. JO INDEKEU, AMBASSADEUR DU ROYAUME DE LA BELGIQUE EN RDC AU CEDA
                                     </a>
                                 </h5>

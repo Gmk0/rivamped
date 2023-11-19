@@ -10,7 +10,7 @@
 
         </div>
 
-        <div class="absolute inset-0 flex items-center justify-start px-4">
+        <div class="absolute hidden inset-0 lg:flex items-center justify-start px-4">
             <x-bread-cumb :lien1="'Contact'" />
 
         </div>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div data-aos="fade-left" class="w-full px-4 lg:w-7/12 ">
-                    <div class="relative py-8 bg-white rounded-lg shadow-lg sm:p-12">
+                    <div class="relative p-8 bg-white rounded-lg shadow-lg lg:p-12">
                         <form>
                             <div class="mb-6">
                                 <input type="text" placeholder="Your Name"
