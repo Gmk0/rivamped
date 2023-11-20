@@ -4,13 +4,17 @@
         <img src="/images/loader.gif" alt="Loading..." />
     </div>--}}
 
-    <section class="py-8">
+    <section class="lg:min-h-screen">
+        <div class="max-w-6xl py-8 mx-auto">
+
+
+
         <div class="flex flex-col h-full lg:flex-row">
             <div class="flex flex-col items-center justify-center w-full px-6 lg:w-1/2 ">
                 <h2 class="mb-4 text-2xl lg:text-4xl font-bold text-center">Faites une différence avec votre don !</h2>
                 <p class="mb-6 text-lg text-center">Votre générosité soutient notre mission en faveur de la réhabilitation et de
                     la réinsertion sociale des détenus.</p>
-                <a href="{{route('don')}}" class="btn-donate">Faire un don</a>
+                <a href="{{route('don')}}" class="btn-donate">Faites un don</a>
             </div>
             <div class="w-full p-4 m-2 lg:w-1/2">
 
@@ -23,6 +27,7 @@
 
         </div>
 
+        </div>
     </section>
 
     <section class="min-h-screen bg-white">
