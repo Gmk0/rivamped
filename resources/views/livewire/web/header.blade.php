@@ -183,7 +183,7 @@
                 <div class="block col-span-4  lg:col-span-2 lg:hidden mobile-logo">
                     <div class="logo w-18">
                         <a href="{{url('/')}}">
-                            <img src="/img/logo.jpg" class="w-12" alt="Revempade"
+                            <img src="/img/logo.jpg" class="w-full" alt="Revempade"
                                 title="Revempade" />
                         </a>
                     </div>
@@ -191,7 +191,7 @@
                 <!--Mobile Logo-->
                <div class="col-span-4 lg:items-end lg:col-span-2 md:col-span-3">
                     <div class="site-cart">
-                        <a href="{{route('don')}}" wire:navigate class="btn-donate2">
+                        <a href="{{route('don')}}" class="btn-donate2">
                             Faites un Don
                         </a>
 
@@ -206,7 +206,7 @@
         <div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
         <ul id="MobileNav" class="mobile-nav">
             <li class="flex lvl1 parent">
-                <a class="flex gap-2" href="{{route('home')}}" wire:navigate>
+                <a class="flex gap-2" href="{{route('home')}}">
 
 
                 <span class="flex gap-4">
@@ -222,7 +222,7 @@
                 </a>
 
             </li>
-            <li class="lvl1 parent megamenu"><a href="{{route('Realisations')}}" wire:navigate>
+            <li class="lvl1 parent megamenu"><a href="{{route('Realisations')}}">
                <span class="flex gap-4">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                         class="w-5 h-5">
@@ -235,7 +235,7 @@
             </a>
 
             </li>
-            <li class="lvl1 parent"><a href="{{route('contact')}}" wire:navigate>
+            <li class="lvl1 parent"><a href="{{route('contact')}}">
 
                <span class="flex gap-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -248,7 +248,7 @@
         </a>
 
             </li>
-            <li class="lvl1 parent"><a href="{{route('blog')}}" wire:navigate>
+            <li class="lvl1 parent"><a href="{{route('blog')}}">
 
                     <span class="flex gap-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -273,8 +273,8 @@
                  <i class="anm anm-plus-l"></i>
             </a>
                 <ul>
-                    <li><a href="{{route('contact')}}" class="site-nav" wire:navigate>Contact</a></li>
-                        <li><a href="{{route('feedback')}}" class="site-nav" wire:navigate>Votre Avis <span class="lbl nm_label1">New</span>
+                    <li><a href="{{route('contact')}}" class="site-nav">Contact</a></li>
+                        <li><a href="{{route('feedback')}}" class="site-nav">Votre Avis <span class="lbl nm_label1">New</span>
                             </a></li>
 
                         <li><a href="{{route('faq')}}" class="hidden site-nav" wire:navigate>FAQs</a></li>
