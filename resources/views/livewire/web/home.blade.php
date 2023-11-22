@@ -112,8 +112,11 @@
                         class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
                         <div class="relative p-8 py-12 space-y-8">
                             <div class="flex items-center justify-center">
-                                <img src="{{Storage::disk('local')->url('public/'.$axe->image) }}" class="items-center w-12" width="512" height="512"
+                                <img src="/img/juridique.JPG" class="items-center w-12" width="512" height="512"
                                     alt="burger illustration" />
+
+                                {{--<img src="{{Storage::disk('local')->url('public/'.$axe->image) }}" class="items-center w-12" width="512" height="512"
+                                    alt="burger illustration" />--}}
 
                             </div>
 
