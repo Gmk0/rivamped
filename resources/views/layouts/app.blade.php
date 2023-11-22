@@ -14,7 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-
+        <link rel="stylesheet" href="/build/assets/app-90660471.css">
 
         <!-- Styles -->
         @livewireStyles
@@ -44,6 +44,8 @@
 
         @livewireScripts
 
+        <script src="/build/assets/app-aafe0780.js">
 
+        </script>
     </body>
 </html>
