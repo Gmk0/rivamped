@@ -22,6 +22,8 @@ Route::view('/test', 'test')->name('test');
 
 Route::get('/Realisations', \App\Livewire\Web\News::class)->name('Realisations');
 
+Route::get('/Realisations/{slug}', \App\Livewire\Realisation\OneRealisation::class)->name('Realisation.one');
+
 
 Route::get('/blog/{slug}', \App\Livewire\Blog\OneView::class)->name('blog.view');
 Route::get('/blog', \App\Livewire\Web\Blog::class)->name('blog');

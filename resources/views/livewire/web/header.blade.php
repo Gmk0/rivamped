@@ -191,9 +191,14 @@
                 <!--Mobile Logo-->
                <div class="col-span-4 lg:items-end lg:col-span-2 md:col-span-3">
                     <div class="site-cart">
-                        <a href="{{route('don')}}" class="btn-donate2">
-                            Faites un Don
+                        <a href="{{route('don')}}" class="lg:hidden flex items-center justify-center btn-donate2 !px-2 py-2 ">
+
+                          <span class="text-[10px]"> Faites un Don</span>
                         </a>
+                        <a href="{{route('don')}}" class="lg:flex items-center justify-center hidden btn-donate2">
+
+                                     Faites un Don
+                            </a>
 
                     </div>
 

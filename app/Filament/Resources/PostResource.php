@@ -13,8 +13,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use FilamentTiptapEditor\TiptapEditor;
-use FilamentTiptapEditor\Enums\TiptapOutput;
+//use FilamentTiptapEditor\TiptapEditor;
+//use FilamentTiptapEditor\Enums\TiptapOutput;
 use Filament\Forms\Components\Select;
 
 class PostResource extends Resource
@@ -40,6 +40,7 @@ class PostResource extends Resource
                 ->required()
                 ->columnSpanFull(),
 
+                /*
                 TiptapEditor::make('content')
                     ->profile('default')
                     //->tools([]) // individual tools to use in the editor, overwrites profile
@@ -51,6 +52,7 @@ class PostResource extends Resource
                     ->required()
                     ->columnSpanFull(),
 
+                    */
             Select::make('user_id')
             ->label('Author')
             ->options(User::all()->pluck('name', 'id'))

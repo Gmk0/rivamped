@@ -12,6 +12,9 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+//use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+use FilamentTiptapEditor\TiptapEditor;
+use FilamentTiptapEditor\Enums\TiptapOutput;
 
 class TemoignageResource extends Resource
 {
@@ -24,8 +27,18 @@ class TemoignageResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('content')
-                    ->columnSpanFull(),
+               TiptapEditor::make('content')
+                ->profile('simple')
+                //->tools([]) // individual tools to use in the editor, overwrites profile
+                ->disk('local') // optional, defaults to config setting
+                ->directory('attachement') // optional, defaults to config setting
+                //->acceptedFileTypes(['']) // optional, defaults to config setting
+                ->maxFileSize('10000') // optional, defaults to config setting
+                ->output(TiptapOutput::Html) // optional, change the format for saved data, default is html
+                ->maxContentWidth('5xl')
+
+                ->required()
+                ->columnSpanFull(),
                 Forms\Components\TextInput::make('auteur')
                     ->maxLength(255),
                 Forms\Components\Toggle::make('published')
@@ -39,6 +52,10 @@ class TemoignageResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('auteur')
                     ->searchable(),
+            Tables\Columns\TextColumn::make('content')
+                ->wrap()
+                ->html()
+                ->limit(100),
                 Tables\Columns\IconColumn::make('published')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')

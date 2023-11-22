@@ -194,11 +194,12 @@ body {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
     .btn-donate2 {
             padding: 0.6em 1em;
 
             font-size: 0.9rem;
+
 
         }
     /* Your styles for screens with a maximum width of 767 pixels or less (typically mobile devices) */
@@ -206,6 +207,9 @@ body {
 
     /* Add more styles as needed */
 }
+
+
+
 
 
 /* Style pour les tableaux */

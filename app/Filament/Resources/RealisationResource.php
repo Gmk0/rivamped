@@ -6,12 +6,20 @@ use App\Filament\Resources\RealisationResource\Pages;
 use App\Filament\Resources\RealisationResource\RelationManagers;
 use App\Models\Realisation;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use FilamentTiptapEditor\TiptapEditor;
+use FilamentTiptapEditor\Enums\TiptapOutput;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
+use Illuminate\Support\Str;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+
 
 class RealisationResource extends Resource
 {
@@ -25,27 +33,39 @@ class RealisationResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('tags'),
-                Forms\Components\Textarea::make('content')
-                    ->required()
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('description')
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('files'),
-                Forms\Components\TextInput::make('like')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
-                Forms\Components\Toggle::make('is_publish')
+                TextInput::make('title')
+                ->live(debounce: 2000)
+                ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
+                    if (($get('slug') ?? '') !== Str::slug($old)) {
+                        return;
+                    }
+
+                    $set('slug', Str::slug($state));
+                }),
+
+            TextInput::make('slug'),
+            Forms\Components\Textarea::make('description')
+                ->maxLength(65535)
+                ->columnSpanFull(),
+            //Forms\Components\TextInput::make('tags'),
+            TiptapEditor::make('content')
+            ->profile('simple')
+                //->tools([]) // individual tools to use in the editor, overwrites profile
+                ->disk('local') // optional, defaults to config setting
+                ->directory('attachement') // optional, defaults to config setting
+                //->acceptedFileTypes(['']) // optional, defaults to config setting
+                ->maxFileSize('10000') // optional, defaults to config setting
+                ->output(TiptapOutput::Html) // optional, change the format for saved data, default is html
+                // ->maxContentWidth('5xl')
+
+                ->required()
+                ->columnSpanFull(),
+
+             Forms\Components\Toggle::make('is_publish')
                     ->required(),
+                     SpatieMediaLibraryFileUpload::make('images')
+            ->collection('Realisation'),
+
                 Forms\Components\DateTimePicker::make('published_at'),
             ]);
     }
@@ -55,12 +75,14 @@ class RealisationResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('like')
-                    ->numeric()
-                    ->sortable(),
+                    ->searchable()
+                    ->words(20),
+
+
+            Tables\Columns\TextColumn::make('description')
+                ->limit(100)
+                ->wrap(),
+
                 Tables\Columns\IconColumn::make('is_publish')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('published_at')

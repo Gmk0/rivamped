@@ -39,7 +39,7 @@
 
             </div>
 
-            @for ($i =1 ; $i <10 ; $i++)
+            @foreach ($realisations as $realisation)
 
 
 
@@ -67,7 +67,7 @@
                                                             <i class="mr-2 fa fa-calendar-alt"></i>
                                                             <span class="block mr-2">
 
-                                                                26 Mai 2021
+                                                                {{$realisation->published_at }}
                                                             </span>
 
                                             </p>
@@ -76,18 +76,16 @@
 
 
                                 <h5 class="text-xl font-semibold text-yellow-300 truncate">
-                                    <a href="#" class="text-danger">
-                                        VISITE DE MR. JO INDEKEU, AMBASSADEUR DU ROYAUME DE LA BELGIQUE EN RDC AU CEDA
+                                    <a href="{{route('Realisation.one',[$realisation->slug])}}" class="text-danger">
+                                     {{$realisation->title }}
                                     </a>
                                 </h5>
 
                                 <p class="text-base font-medium">
-                                    Visite de l'Ambassadeur de la Belgique en RD Congo, M. Jo INDEKEU
-                                        et du Conseiller Ministériel M. Stefan MEERSCHAERT au Centre d'Excellence Damien CEDA où une
-                                        nou...
+                                   {{$realisation->description }}
                                 </p>
                                     <p class="my-4">
-                                        <a class="py-2 decoration-none hover:translate-x-4 transition-all border-blue-600 border-b-[4px]  no-underline rounded-0" href="https://actiondamienrdcongo.org/news/9">
+                                        <a href="{{route('Realisation.one',[$realisation->slug])}}" class="py-2 decoration-none hover:translate-x-4 transition-all border-blue-600 border-b-[4px]  no-underline rounded-0" href="https://actiondamienrdcongo.org/news/9">
                                             Lire la suite ... »
                                         </a>
                                     </p>
@@ -101,7 +99,7 @@
 
             </div>
 
-            @endfor
+            @endforeach
 
         </div>
 

@@ -6,12 +6,18 @@ use App\Filament\Resources\HistoireResource\Pages;
 use App\Filament\Resources\HistoireResource\RelationManagers;
 use App\Models\Histoire;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use FilamentTiptapEditor\TiptapEditor;
+use FilamentTiptapEditor\Enums\TiptapOutput;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
+use Illuminate\Support\Str;
 
 class HistoireResource extends Resource
 {
@@ -24,21 +30,41 @@ class HistoireResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required(),
-                Forms\Components\TextInput::make('slug')
-                    ->required(),
-                Forms\Components\Textarea::make('content')
-                    ->required()
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('description')
-                    ->columnSpanFull(),
+
+
+                TextInput::make('title')
+                    ->live(debounce: 2000)
+                    ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
+                        if (($get('slug') ?? '') !== Str::slug($old)) {
+                            return;
+                        }
+
+                        $set('slug', Str::slug($state));
+                    }),
+
+                TextInput::make('slug')->disabled(),
+            Forms\Components\Textarea::make('description')
+                ->columnSpanFull(),
+
+            TiptapEditor::make('content')
+            ->profile('simple')
+                //->tools([]) // individual tools to use in the editor, overwrites profile
+                ->disk('local') // optional, defaults to config setting
+                ->directory('attachement') // optional, defaults to config setting
+                //->acceptedFileTypes(['']) // optional, defaults to config setting
+                ->maxFileSize('10000') // optional, defaults to config setting
+                ->output(TiptapOutput::Html) // optional, change the format for saved data, default is html
+               // ->maxContentWidth('5xl')
+
+                ->required()
+                ->columnSpanFull(),
+
 
             Forms\Components\FileUpload::make('image')
             ->preserveFilenames()
-
             ->directory('illustration'),
-                Forms\Components\Toggle::make('is_publish')
+
+            Forms\Components\Toggle::make('is_publish')
                     ->required(),
             ]);
     }
