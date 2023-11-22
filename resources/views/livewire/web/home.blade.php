@@ -205,8 +205,11 @@
                         <div class="swiper-slide">
                             <div x-data="{hover:false}" @mouseLeave="hover=false" @mouseEnter="hover=true" class="p-4 bg-white shadow-md relativerounded-lg">
 
-                                <img alt="Histoirede réussite 1"
-                                 class="object-cover w-full h-56 mb-4 bg-black rounded-lg opacity-50 "src="{{Storage::disk('local')->url('public/'.$story->image) }}" alt="">
+                                <img alt="Histoirede réussite 1" class="object-cover w-full h-56 mb-4 bg-black rounded-lg opacity-50 "
+                                    src="/img/test.JPG" alt="">
+
+                               {{-- <img alt="Histoirede réussite 1"
+                                 class="object-cover w-full h-56 mb-4 bg-black rounded-lg opacity-50 "src="{{Storage::disk('local')->url('public/'.$story->image) }}" alt="">--}}
 
                                 <div x-show="hover"
                                   x-transition:enter="transition ease-in duration-200"
