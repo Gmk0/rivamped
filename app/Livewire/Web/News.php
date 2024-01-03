@@ -2,7 +2,9 @@
 
 namespace App\Livewire\Web;
 
-use App\Models\Realisation;
+use App\Models\Category;
+use App\Models\Post;
+use App\Models\Tag;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\WithPagination;
@@ -11,10 +13,20 @@ use Livewire\WithPagination;
 class News extends Component
 {
     use WithPagination;
+    public function mount()
+    {
+       
+    }
     public function render()
     {
+       
 
-
-        return view('livewire.web.news',['realisations'=>Realisation::paginate(10)]);
+        return view('livewire.web.news',
+        [
+        'realisations'=> Post::where('is_publish',true)->paginate(10),
+        'categories'=> Category::all(),
+        'tags'=> Tag::all(),
+        'recents' => Post::where('is_publish', true)->latest()->take(5)->get(),
+        ]);
     }
 }

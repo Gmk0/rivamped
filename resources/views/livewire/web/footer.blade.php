@@ -1,6 +1,6 @@
 <div>
 
-    <footer class="px-4 bg-white divide-y dark:bg-gray-800 dark:text-gray-100">
+    <div class="px-4 bg-gray-900 divide-y dark:bg-gray-800 dark:text-gray-100">
         <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
             <div class="lg:w-1/3">
                 <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 lg:justify-start">
@@ -84,5 +84,5 @@
             </div>
         </div>
         <div class="py-6 text-sm text-center dark:text-gray-400">© 2010 Pro create Co. All rights reserved.</div>
-    </footer>
+    </div>
 </div>

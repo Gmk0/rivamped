@@ -1,8 +1,47 @@
 <div class="relative">
 
-   {{-- <div id="pre-loader">
-        <img src="/images/loader.gif" alt="Loading..." />
-    </div>--}}
+
+   <div class="slideshow slideshow-wrapper pb-section sliderFull">
+        <div class="home-slideshow">
+            <div class="slide slideshow--medium">
+                <div class="blur-up lazyload bg-size">
+                    <img class="blur-up lazyload bg-img" data-src="/images/slideshow-banners/home7-banner1.jpg"
+                        src="/images/slideshow-banners/home7-banner1.jpg" alt="Modern Sophistication"
+                        title="Modern Sophistication" />
+                    <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                        <div class="slideshow__text-content classic left">
+                            <div class="container">
+                                <div class="wrap-caption left">
+                                    <h2 class="!text-black h1 mega-title slideshow__title">Modern Sophistication</h2>
+                                    <span class="mega-subtitle !text-black slideshow__subtitle">Ecco Sharp comfort and innovation</span>
+                                    <span class="btn">Shop now</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide slideshow--medium">
+                <div class="blur-up lazyload bg-size">
+                    <img class="blur-up lazyload bg-img" data-src="/images/slideshow-banners/home7-banner2.jpg"
+                        src="/images/slideshow-banners/home7-banner2.jpg" alt="New Season Styles"
+                        title="New Season Styles" />
+                    <div class="slideshow__text-wrap slideshow__overlay classic middle">
+                        <div class="slideshow__text-content classic middle">
+                            <div class="container">
+                                <div class="wrap-caption right">
+                                    <h2 class="!text-black h1 mega-title slideshow__title">New Season Styles</h2>
+                                    <span class="!text-black mega-subtitle slideshow__subtitle">Break all boundaries with our new
+                                        arrival footwears</span>
+                                    <span class="btn">Shop now</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="lg:min-h-screen">
         <div class="max-w-6xl py-8 mx-auto">
@@ -11,7 +50,7 @@
 
         <div class="flex flex-col h-full lg:flex-row">
             <div class="flex flex-col items-center justify-center w-full px-6 lg:w-1/2 ">
-                <h2 class="mb-4 text-2xl lg:text-4xl font-bold text-center">Faites une différence avec votre don !</h2>
+                <h2 class="mb-4 text-2xl font-bold text-center lg:text-4xl">Faites une différence avec votre don !</h2>
                 <p class="mb-6 text-lg text-center">Votre générosité soutient notre mission en faveur de la réhabilitation et de
                     la réinsertion sociale des détenus.</p>
                 <a href="{{route('don')}}" class="btn-donate">Faites un don</a>
@@ -331,7 +370,66 @@
 
 
     </section>
-    <section class="min-h-screen bg-white">
+
+   {{--<section class="min-h-screen bg-gray-900 ">
+        <div class="flex max-w-6xl p-6 mx-auto">
+            <div class="flex flex-col justify-between w-1/2 py-12">
+                <div class="flex flex-col gap-6 ">
+                    <div>
+                            <h1 class="text-white text-md">Donation</h1>
+                    </div>
+                    <div>
+                        <h1 class="text-5xl text-white">Need Pure Water For Mozambique People.</h1>
+                    </div>
+
+                </div>
+                <div class="flex flex-col items-start justify-between gap-6 mt-10">
+                    <div class="flex flex-row gap-4 ">
+
+
+
+                        <div>
+                            <button  type="text"
+                            class="p-4 bg-gray-800 border-2 active:border-yellow-400 focus:ring-1 focus:border-yellow-400 focus:ring-yellow-500 border-gray-50 ">
+                            20$
+                            </button>
+                        </div>
+
+
+                        <div class="w-1/2">
+                            <input type="text"
+                                class="w-1/2 bg-gray-800 border-2 p-7 pb-auto pt-auto active:border-yellow-400 focus:ring-1 focus:border-yellow-400 focus:ring-yellow-500 border-gray-50 " />
+
+                         </div>
+
+
+                    </div>
+
+                    <div class="flex items-start mt-6">
+                        <div>
+                          <button
+                            class="relative z-10 w-32 h-12 p-2 overflow-hidden text-xl font-bold text-white bg-black border-none rounded-md cursor-pointer group">
+                            DON
+                            <span
+                                class="absolute h-32 transition-transform duration-1000 origin-right transform scale-x-0 w-36 -top-8 -left-2 bg-sky-200 rotate-12 group-hover:scale-x-100 group-hover:duration-500"></span>
+                            <span
+                                class="absolute h-32 transition-transform duration-700 origin-right transform scale-x-0 w-36 -top-8 -left-2 bg-sky-400 rotate-12 group-hover:scale-x-100 group-hover:duration-700"></span>
+                            <span
+                                class="absolute h-32 transition-transform duration-500 origin-right transform scale-x-0 w-36 -top-8 -left-2 bg-sky-600 rotate-12 group-hover:scale-x-100 group-hover:duration-1000"></span>
+                            <span
+                                class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">Faites un Don!</span>
+                        </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="w-1/2"></div>
+        </div>
+
+    </section>--}}
+    <section class="min-h-screen bg-gray-900">
 
         <div class="px-4 py-8 mx-auto max-w-7xl">
 
@@ -349,7 +447,7 @@
 
                         </h2>
 
-                        <p class="text-lg text-gray-700 mt-2-4">
+                        <p class="text-lg text-gray-200 mt-2-4">
 
                             Chez Revempaded, nous nous engageons à soutenir les détenus et
                             ex-détenus dans leur processus de réintégration dans la société
@@ -503,7 +601,7 @@
                     </div>
                 </div>
                 <div data-aos="fade-left" class="w-full px-4 lg:w-7/12 xl:w-6/12">
-                    <div class="relative p-8 bg-white rounded-lg shadow-lg   lg:p-12">
+                    <div class="relative p-8 bg-white rounded-lg shadow-lg lg:p-12">
                         <form>
                             <div class="mb-6">
                                 <input type="text" placeholder="Votre Nom"

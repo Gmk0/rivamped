@@ -4,11 +4,14 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
+use App\Models\Category;
 use App\Models\Post;
+use App\Models\Tag;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Illuminate\Support\Collection;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -16,7 +19,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 //use FilamentTiptapEditor\TiptapEditor;
 //use FilamentTiptapEditor\Enums\TiptapOutput;
 use Filament\Forms\Components\Select;
-
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
+use Illuminate\Support\Str;
 class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
@@ -30,15 +36,53 @@ class PostResource extends Resource
         return $form
             ->schema([
 
-                Forms\Components\TextInput::make('title')
-                    ->required(),
-                Forms\Components\TextInput::make('slug')
-                    ->required(),
+                TextInput::make('title')
+                ->live(debounce: 2000)
+                ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
+                    if (($get('slug') ?? '') !== Str::slug($old)) {
+                        return;
+                    }
+
+                    $set('slug', Str::slug($state));
+                }),
+
+            TextInput::make('slug')->unique(ignorable: fn ($record) => $record),
+            
+
+                    Forms\Components\Select::make('category_id')
+            ->options(Category::all()->pluck('intitule', 'id'))
+                    ->createOptionForm([
+                        Forms\Components\TextInput::make('intitule')
+                            ->required(),
+
+                    ])
+            ->searchable()
+            ->native(false)
+            ->live(),
+
+             Forms\Components\Select::make('tags')->label('Sous categorie')
+                    ->options(fn (Get $get): Collection => Tag::query()
+                        ->where('category_id', $get('category_id'))
+                        ->pluck('tag', 'id')
+                        )->multiple()
+                    ->searchable()
+                    ->native(false)
+                ,
 
 
             Forms\Components\Textarea::make('description')
                 ->required()
                 ->columnSpanFull(),
+
+        Forms\Components\RichEditor::make('content')
+                ->required()
+                ->columnSpanFull(),
+        Forms\Components\SpatieMediaLibraryFileUpload::make('image')
+            
+            ->collection('posts')
+            
+            ->preserveFilenames()
+            ->required(),
 
                 /*
                 TiptapEditor::make('content')

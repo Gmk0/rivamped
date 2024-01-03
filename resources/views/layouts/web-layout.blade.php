@@ -22,7 +22,13 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
+        @wireUiScripts
+
+        <link rel="stylesheet" href="/test/main.css">
+
+        <link rel="stylesheet" href="/test/style.css">
 
         <script src="/js/js/vendor/jquery-3.3.1.min.js"></script>
 
@@ -31,7 +37,7 @@
         <script src="/js/js/main.js" defer></script>
 
         @livewireStyles
-
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     </head>
     <body class="bg-gray-100">

@@ -19,10 +19,11 @@ Route::get('/', \App\Livewire\Web\Home::class)->name('home');
 
 Route::view('/test', 'test')->name('test');
 
+Route::view('/test2','test2')->name('test2');
 
-Route::get('/Realisations', \App\Livewire\Web\News::class)->name('Realisations');
+Route::get('/Actualites', \App\Livewire\Web\News::class)->name('Realisations');
 
-Route::get('/Realisations/{slug}', \App\Livewire\Realisation\OneRealisation::class)->name('Realisation.one');
+Route::get('/Actualites/{slug}', \App\Livewire\Realisation\OneRealisation::class)->name('Realisation.one');
 
 
 Route::get('/blog/{slug}', \App\Livewire\Blog\OneView::class)->name('blog.view');

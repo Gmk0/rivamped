@@ -7,11 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Post extends Model
+
+use Spatie\Image\Manipulations;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+class Post extends Model implements HasMedia
 {
     use HasFactory;
 
-    protected  $fillable = ['title','image','category_id', 'user_id','description', 'slug', 'content', 'like', 'is_publish'];
+
+    use InteractsWithMedia;
+    protected  $fillable = ['title','image','category_id', 'user_id','description', 'slug', 'content', 'tags', 'like', 'is_publish', 'published_at'];
 
 
     /**
@@ -20,7 +25,9 @@ class Post extends Model
      * @var array
      */
     protected $casts = [
-        'created_at' => 'datetime', // Cast de la colonne 'created_at' en type 'datetime'
+        'created_at' => 'datetime',
+        'tags'=>'array',
+        'published_at'=>'datetime',
     ];
 
     /**
@@ -35,6 +42,11 @@ class Post extends Model
         return $this->asDateTime($value)->format('d/m/Y'); // Format de date personnalisé
     }
 
+    public function getTagsAttribute($value)
+    {
+        $tagIds = json_decode($value); // Convertit la chaîne JSON en tableau
+        return Tag::whereIn('id', $tagIds)->get();
+    }
 
 
     public function user()
