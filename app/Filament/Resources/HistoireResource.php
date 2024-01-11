@@ -33,7 +33,7 @@ class HistoireResource extends Resource
 
 
                 TextInput::make('title')
-                    ->live(debounce: 2000)
+                    ->live(debounce: 1000)
                     ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
                         if (($get('slug') ?? '') !== Str::slug($old)) {
                             return;
@@ -42,7 +42,9 @@ class HistoireResource extends Resource
                         $set('slug', Str::slug($state));
                     }),
 
-                TextInput::make('slug')->disabled(),
+                TextInput::make('slug')
+            ->unique(ignorable: fn ($record) => $record)
+                ->required(),
             Forms\Components\Textarea::make('description')
                 ->columnSpanFull(),
 
@@ -60,9 +62,11 @@ class HistoireResource extends Resource
                 ->columnSpanFull(),
 
 
-            Forms\Components\FileUpload::make('image')
-            ->preserveFilenames()
-            ->directory('illustration'),
+            Forms\Components\SpatieMediaLibraryFileUpload::make('image')
+                ->collection('stories')
+                ->multiple()
+                ->preserveFilenames()
+                ->required(),
 
             Forms\Components\Toggle::make('is_publish')
                     ->required(),

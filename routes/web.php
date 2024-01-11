@@ -17,14 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', \App\Livewire\Web\Home::class)->name('home');
 
-Route::view('/test', 'test')->name('test');
+
+Route::view('/galerie','testG');
 
 Route::view('/test2','test2')->name('test2');
 
-Route::get('/Actualites', \App\Livewire\Web\News::class)->name('Realisations');
+Route::get('/actualites', \App\Livewire\Web\News::class)->name('Realisations');
 
-Route::get('/Actualites/{slug}', \App\Livewire\Realisation\OneRealisation::class)->name('Realisation.one');
+Route::get('/actualites/{slug}', \App\Livewire\Realisation\OneRealisation::class)->name('Realisation.one');
 
+Route::get('/category/{intitule}', \App\Livewire\Web\News\CategoryPost::class)->name('CategoryPost');
 
 Route::get('/blog/{slug}', \App\Livewire\Blog\OneView::class)->name('blog.view');
 Route::get('/blog', \App\Livewire\Web\Blog::class)->name('blog');
@@ -41,7 +43,9 @@ Route::get('/join-us/benevole', \App\Livewire\Web\BenevoleView::class)->name('be
 
 Route::get('/join-us/partenarait', \App\Livewire\Web\PartenaireView::class)->name('partenarait');
 
-Route::get('/histoires/{story?}', \App\Livewire\Web\Story::class)->name('story');
+Route::get('/histoires/{story}', \App\Livewire\Web\OneStory::class)->name('OneStory');
+
+Route::get('/histoires', \App\Livewire\Web\Story::class)->name('story');
 
 
 Route::middleware([

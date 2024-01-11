@@ -6,12 +6,16 @@ use App\Filament\Resources\AxeResource\Pages;
 use App\Filament\Resources\AxeResource\RelationManagers;
 use App\Models\Axe;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class AxeResource extends Resource
 {
@@ -23,20 +27,31 @@ class AxeResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required(),
-                Forms\Components\TextInput::make('slug')
-                    ->required(),
-                Forms\Components\Textarea::make('content')
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('description')
-                    ->columnSpanFull(),
-                Forms\Components\FileUpload::make('image')
+            ->schema([TextInput::make('title')
+                ->live(debounce: 2000)
+                ->afterStateUpdated(function (Get $get, Set $set, ?string $old, ?string $state) {
+                    if (($get('slug') ?? '') !== Str::slug($old)) {
+                        return;
+                    }
+
+                    $set('slug', Str::slug($state));
+                }),
+
+            TextInput::make('slug')->unique(ignorable: fn ($record) => $record),
+            Forms\Components\Textarea::make('description')
+                ->required()
+                ->columnSpanFull(),
+
+            Forms\Components\RichEditor::make('content')
+                ->required()
+                ->columnSpanFull(),
+            Forms\Components\SpatieMediaLibraryFileUpload::make('image')
+                ->collection('axes')
                 ->preserveFilenames()
-                ->directory('axes'),
+                ->required(),
                 Forms\Components\Toggle::make('is_publish')
-                    ->required(),
+                    ->required()
+                    ->columnSpanFull(),
             ]);
     }
 

@@ -3,6 +3,8 @@ import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors');
 export default {
     darkMode:'class',
     presets: [
@@ -24,6 +26,21 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+
+            colors: {
+                info: colors.sky["500"],
+                accent: "#5f5af6",
+                "accent-focus": "#4d47f5",
+
+                findDark: colors.gray,
+                secondary: colors.slate,
+                fila: "#fcf9f6",
+                find: colors.orange,
+                danger: colors.rose,
+                primary: colors.yellow,
+                success: colors.green,
+                warning: colors.yellow,
             },
         },
     },

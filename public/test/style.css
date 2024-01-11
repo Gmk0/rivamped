@@ -96,7 +96,7 @@ a.button_intro,
     font-family: inherit;
     font-size: inherit;
     color: #fff !important;
-    background: #F33;
+    background: rgb(250 202 21 / 1);
     cursor: pointer;
     padding: 12px 35px;
     display: inline-block;
@@ -167,7 +167,7 @@ a.btn_1.medium,
 
 a.btn_1:hover,
 .btn_1:hover {
-    background: #F33
+    background: rgb(250 202 21 / 1)
 }
 
 a.btn_quote {
@@ -229,7 +229,7 @@ a.btn_full,
 
 a.btn_full:hover,
 .btn_full:hover {
-    background: #F33
+    background: rgb(250 202 21 / 1)
 }
 
 a.btn_contact,
@@ -239,7 +239,7 @@ a.btn_contact,
     font-size: inherit;
     color: #fff;
     width: 100%;
-    background: #F33;
+    background: rgb(250 202 21 / 1);
     cursor: pointer;
     padding: 12px 20px;
     display: inline-block;
@@ -271,7 +271,7 @@ a#phone_top {
     position: relative;
     font-weight: 600;
     margin-right: 10px;
-    color: #F33 !important;
+    color: rgb(250 202 21 / 1) !important;
     padding-left: 22px
 }
 
@@ -352,7 +352,7 @@ ul#top_links a {
 }
 
 ul#top_links a:hover {
-    color: #F33
+    color: rgb(250 202 21 / 1)
 }
 
 .animated {
@@ -890,7 +890,7 @@ ul#top_links a:hover {
     position: relative;
     display: table;
     width: 100%;
-    z-index: 2
+
 }
 
 .parallax_window_in.short {
@@ -898,7 +898,7 @@ ul#top_links a:hover {
     position: relative;
     display: table;
     width: 100%;
-    z-index: 2
+
 }
 
 #sub_content_in {
@@ -1005,7 +1005,7 @@ footer ul {
 
 #social_footer ul li a:hover {
     background: #fff;
-    color: #F33
+    color: rgb(250 202 21 / 1)
 }
 
 #contact_bg {
@@ -1039,7 +1039,7 @@ ul#contact_details_footer li#email_footer {
     font-size: 20px;
     left: 0;
     top: -5px;
-    color: #F33
+    color: rgb(250 202 21 / 1)
 }
 
 #address_footer:before {
@@ -1205,7 +1205,7 @@ ul#contact_details_footer li#email_footer {
 }
 
 .phone_feat a {
-    color: #F33;
+    color: rgb(250 202 21 / 1);
     font-weight: 700
 }
 
@@ -1318,7 +1318,7 @@ video {
     color: #fff;
     width: 100%;
     z-index: 99;
-    border-bottom: 3px solid #F33
+    border-bottom: 3px solid rgb(250 202 21 / 1)
 }
 
 #book {
@@ -1398,7 +1398,7 @@ ul.feat#about li i {
     left: 25px;
     top: 25px;
     font-size: 42px;
-    color: #F33
+    color: rgb(250 202 21 / 1)
 }
 
 .promo_full_wp div h3 {
@@ -1554,7 +1554,7 @@ ul.feat#about li i {
 }
 
 .team-item-detail-inner .social li a:hover {
-    color: #F33
+    color: rgb(250 202 21 / 1)
 }
 
 .team-item-info {
@@ -1640,11 +1640,13 @@ ul#cat_nav li a:before {
     font-size: 20px;
     right: 5px;
     top: 5px;
-    content: "\35"
+    content: ""
 }
 
 img.img-fluid.border {
-    border-bottom: 3px solid #F33 !important
+
+
+    border-bottom: 3px solid rgb(250 202 21 / 1) !important
 }
 
 ul.feat {
@@ -1680,7 +1682,7 @@ ul.feat li img {
 }
 
 .form_title h3 strong {
-    background-color: #F33;
+    background-color: rgb(250 202 21 / 1);
     text-align: center;
     width: 40px;
     height: 40px;
@@ -1868,7 +1870,7 @@ ul.stepy-titles {
 
 .stepy-titles .current-step {
     cursor: auto;
-    background: #F33;
+    background: rgb(250 202 21 / 1);
     padding: 7px 20px;
     color: #fff
 }
@@ -1908,7 +1910,7 @@ input[type="submit"].finish {
     font-family: inherit;
     font-size: inherit;
     color: #fff;
-    background: #F33;
+    background: rgb(250 202 21 / 1);
     cursor: pointer;
     padding: 7px 20px;
     display: inline-block;
@@ -1990,7 +1992,7 @@ input#website {
 }
 
 .box_quote h3 strong {
-    color: #F33;
+    color: rgb(250 202 21 / 1);
     display: block
 }
 
@@ -2015,7 +2017,7 @@ input#website {
 }
 
 a.call_us_bt {
-    background-color: #F33;
+    background-color: rgb(250 202 21 / 1);
     color: #fff;
     display: inline-block;
     padding: 10px 15px;
@@ -2027,7 +2029,7 @@ a.call_us_bt {
     background: #fafafa;
     padding: 25px;
     margin-bottom: 20px;
-    border-top: 3px solid #F33
+    border-top: 3px solid rgb(250 202 21 / 1)
 }
 
 .box_style_4 ul {
@@ -2214,7 +2216,7 @@ ul.list_ok li:before {
     font-family: 'ElegantIcons';
     font-size: 14px;
     content: "\4e";
-    color: #F33;
+    color: rgb(250 202 21 / 1);
     position: absolute;
     left: 0;
     top: 0
@@ -2272,7 +2274,7 @@ ul.list_2 li:before {
     font-family: 'ElegantIcons';
     font-size: 20px;
     content: "•";
-    color: #F33;
+    color: rgb(250 202 21 / 1);
     position: absolute;
     left: 0;
     top: 0
@@ -2332,7 +2334,7 @@ ul.list_2 li:before {
 }
 
 .bg_content div a i {
-    color: #F33;
+    color: rgb(250 202 21 / 1);
     font-size: 60px;
     -webkit-transition: all .5s ease;
     transition: all .5s ease
@@ -2809,12 +2811,12 @@ blockquote.styled {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: #F33
+    background: rgb(250 202 21 / 1)
 }
 
 figure.animated {
     overflow: hidden;
-    border-bottom: 3px solid #F33
+    border-bottom: 3px solid rgb(250 202 21 / 1)
 }
 
 figure.animated a img {
@@ -2844,7 +2846,7 @@ figure.animated a:hover img {
 }
 
 body#confirmation {
-    background-color: #F33;
+    background-color: rgb(250 202 21 / 1);
 }
 
 #success {
@@ -3002,7 +3004,7 @@ body#confirmation {
 }
 
 #cat_blog ul li a:hover {
-    color: #e04f67
+    color: rgb(250 202 21 / 1);
 }
 
 ul.recent_post {
@@ -3057,7 +3059,7 @@ ul.recent_post li:last-child {
 }
 
 .post_info span {
-    color: #f66
+    color: rgb(250 202 21 / 1)
 }
 
 .post-left {

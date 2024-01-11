@@ -1,10 +1,5 @@
 <div class="px-4 mx-2 lg:mx-0 lg:w-3/12">
     <div class="box_style_1">
-        <div class="widget">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search...">
-            </div>
-        </div><!-- End Search -->
 
         <hr>
 
@@ -12,7 +7,7 @@
             <h5 class="my-4">Categories</h5>
             <ul id="cat_nav">
                 @foreach ($categories as $category)
-                <li><a href="#">{{$category->intitule}}</a></li>
+                <li><a href="{{route('CategoryPost',$category->intitule)}}">{{$category->intitule}}</a></li>
 
                 @endforeach
 
@@ -53,7 +48,7 @@
         <h4>Tags</h4>
         <div class="flex flex-wrap">
             @foreach ($tags as $tag)
-            <a href="#">{{$tag->tag}}</a>
+            <a href="{{route('Realisations')}}">{{$tag->tag}}</a>
             @endforeach
 
 

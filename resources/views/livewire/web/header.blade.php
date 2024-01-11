@@ -128,13 +128,13 @@
     </div>
 
 
-    <div class="flex bg-white border-b header-wrap animated">
+    <div class="flex bg-white border-b header-wrap classicHeader animated">
         <div class="w-full px-2 lg:px-6">
             <div class="grid items-center justify-between w-full grid-cols-12 mx-auto">
                 <!--Desktop Logo-->
                 <div class="hidden col-span-2 px-6 logo lg:block">
                     <a href="/">
-                        <img src="/img/logo2.svg" class="w-11" alt="revamped"
+                        <img src="/img/logo2.svg" class="lg:w-11 " alt="revamped"
                             title="revamped" />
                     </a>
                 </div>
@@ -160,7 +160,7 @@
 
                             </li>
                             <li class="lvl1 parent dropdown"><a href="#">Contact <i class="anm anm-angle-down-l"></i></a>
-                                <ul class="dropdown">
+                                <ul class="dropdown !z-[500]">
 
                                     <li><a href="{{route('contact')}}" class="site-nav" wire:navigate>Contact</a></li>
                                     <li><a href="{{route('feedback')}}" class="site-nav" wire:navigate>Votre Avis <span
@@ -171,9 +171,7 @@
 
                                 </ul>
                             </li>
-                            <li class="lvl1 parent dropdown"><a href="{{route('blog')}}" wire:navigate>Blog <i class="anm anm-angle-down-l"></i></a>
 
-                            </li>
 
                         </ul>
                     </nav>
@@ -181,9 +179,9 @@
                 </div>
                 <!--Mobile Logo-->
                 <div class="block col-span-4 lg:col-span-2 lg:hidden mobile-logo">
-                    <div class="logo w-18">
+                    <div class="w-14 logo">
                         <a href="{{url('/')}}">
-                            <img src="/img/logo.jpg" class="w-full" alt="Revempade"
+                            <img src="/img/logo2.svg" class="w-full" alt="Revempade"
                                 title="Revempade" />
                         </a>
                     </div>
@@ -200,14 +198,14 @@
                                      Faites un Don
                             </a>--}}
                             <div>
-                                <button class="button">
-                                    Faites un don
+                                <a href="{{route('don')}} hover:text-white" class="button">
+                                    Donation
                                     <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
                                             clip-rule="evenodd"></path>
                                     </svg>
-                                </button>
+                                </a>
 
                             </div>
 
@@ -265,17 +263,7 @@
         </a>
 
             </li>
-            <li class="lvl1 parent"><a href="{{route('blog')}}">
 
-                    <span class="flex gap-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            class="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M7.875 14.25l1.214 1.942a2.25 2.25 0 001.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 011.872 1.002l.164.246a2.25 2.25 0 001.872 1.002h2.092a2.25 2.25 0 001.872-1.002l.164-.246A2.25 2.25 0 0116.954 9h4.636M2.41 9a2.25 2.25 0 00-.16.832V12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 01.382-.632l3.285-3.832a2.25 2.25 0 011.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0021.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 002.25 2.25z" />
-                        </svg>
-                        Blog
-                    </span>
-            </a>
 
             </li>
             <li class="lvl1 parent megamenu"><a href="#">
@@ -302,4 +290,5 @@
             </li>
         </ul>
     </div>
+
 </div>

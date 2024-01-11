@@ -1,25 +1,19 @@
-<div class="px-6">
+<div class="pt-16">
 
 
-    <div class="relative w-full h-24 border-b border-gray-300 ">
-        <div class="absolute inset-0 flex items-center justify-center">
 
-            <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:text-4xl dark:text-white">
-                A props de nous</h2>
 
-        </div>
+    <x-section-head title="A propos de nous"
 
-        <div class="absolute hidden inset-0 lg:flex items-center justify-start px-4">
-            <x-bread-cumb :lien1="'About'" />
+    link_tile='A propos de nous'>
 
-        </div>
+    </x-section-head>
 
-    </div>
     <div class="mx-w-7xl">
 
-        <div class="container p-4 mx-12 mt-10">
+        <div class="container p-4 mt-10">
 
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto text-justify">
                 <p class="mb-4 text-lg">Revamped est une organisation fictive à but non lucratif dévouée à l'aide aux
                     détenus et à leur réinsertion sociale. Notre mission est d'offrir du soutien, de l'éducation et des
                     opportunités aux personnes cherchant à reconstruire leur vie après une période d'incarcération.</p>
